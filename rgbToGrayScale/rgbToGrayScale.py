@@ -4,11 +4,6 @@ from PIL import Image
 from os import listdir,makedirs
 from os.path import isfile,join
 
-pwd = os.getcwd()
-path = os.path.join(pwd,'img') # Source Folder
-dstpath = os.path.join(pwd,'imgGray') # Destination Folder
-
-
 def convert_image(source_path, dest_path):
     image = cv2.imread(source_path)
     image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)    
